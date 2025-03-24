@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import Kingfisher
 
 class TableHeaderView: UITableViewHeaderFooterView {
 
@@ -45,6 +46,23 @@ class TableHeaderView: UITableViewHeaderFooterView {
         temperatureLabel.text = "\(weather?.current.tempC ?? 0)°"
         feelsLikeLabel.text = "Feels like: \(weather?.current.feelsLikeC ?? 0)°"
         weatherDescription.text = weather?.current.condition.text
+        fetchImage(from: weather?.current.condition.icon ?? "")
     }
 }
 
+//MARK: - Networking
+extension TableHeaderView {
+    private func fetchImage(from url: String) {
+        guard let imageURL = URL(string: "https:\(url)") else { return }
+        let processor = DownsamplingImageProcessor(size: weatherImage.bounds.size)
+        weatherImage.kf.indicatorType = .activity
+        weatherImage.kf.setImage(
+            with: imageURL,
+            placeholder: UIImage.showPlaceholderImage(),
+            options: [
+                .processor(processor),
+                .cacheOriginalImage
+            ]
+        )
+    }
+}

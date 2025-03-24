@@ -21,6 +21,7 @@
 		1204DC2D2D9183200065A48E /* Extension + UIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1204DC2C2D9183200065A48E /* Extension + UIView.swift */; };
 		1204DC2F2D9185360065A48E /* Extension + UIActivityIndicatorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1204DC2E2D9185340065A48E /* Extension + UIActivityIndicatorView.swift */; };
 		1204DC322D9186F80065A48E /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = 1204DC312D9186F80065A48E /* Kingfisher */; };
+		1204DC342D91878A0065A48E /* Extension + UIImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1204DC332D9187880065A48E /* Extension + UIImage.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -39,6 +40,7 @@
 		1204DC292D917FBB0065A48E /* TableHeaderView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TableHeaderView.xib; sourceTree = "<group>"; };
 		1204DC2C2D9183200065A48E /* Extension + UIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Extension + UIView.swift"; sourceTree = "<group>"; };
 		1204DC2E2D9185340065A48E /* Extension + UIActivityIndicatorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Extension + UIActivityIndicatorView.swift"; sourceTree = "<group>"; };
+		1204DC332D9187880065A48E /* Extension + UIImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Extension + UIImage.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -148,6 +150,7 @@
 		1204DC2B2D9182F20065A48E /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
+				1204DC332D9187880065A48E /* Extension + UIImage.swift */,
 				1204DC2E2D9185340065A48E /* Extension + UIActivityIndicatorView.swift */,
 				1204DC2C2D9183200065A48E /* Extension + UIView.swift */,
 			);
@@ -240,6 +243,7 @@
 				1204DC1F2D91724E0065A48E /* SearchViewController.swift in Sources */,
 				1204DC2D2D9183200065A48E /* Extension + UIView.swift in Sources */,
 				1204DC162D915FE90065A48E /* WeatherViewController.swift in Sources */,
+				1204DC342D91878A0065A48E /* Extension + UIImage.swift in Sources */,
 				1204DC282D917F990065A48E /* TableHeaderView.swift in Sources */,
 				1204DC222D917A960065A48E /* Weather.swift in Sources */,
 			);
