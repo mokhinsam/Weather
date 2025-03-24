@@ -20,6 +20,7 @@
 		1204DC2A2D917FBB0065A48E /* TableHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1204DC292D917FBB0065A48E /* TableHeaderView.xib */; };
 		1204DC2D2D9183200065A48E /* Extension + UIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1204DC2C2D9183200065A48E /* Extension + UIView.swift */; };
 		1204DC2F2D9185360065A48E /* Extension + UIActivityIndicatorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1204DC2E2D9185340065A48E /* Extension + UIActivityIndicatorView.swift */; };
+		1204DC322D9186F80065A48E /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = 1204DC312D9186F80065A48E /* Kingfisher */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -45,6 +46,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1204DC322D9186F80065A48E /* Kingfisher in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -169,6 +171,7 @@
 			);
 			name = Weather;
 			packageProductDependencies = (
+				1204DC312D9186F80065A48E /* Kingfisher */,
 			);
 			productName = Weather;
 			productReference = 1204DBF02D915B7B0065A48E /* Weather.app */;
@@ -198,6 +201,9 @@
 			);
 			mainGroup = 1204DBE72D915B7B0065A48E;
 			minimizedProjectReferenceProxies = 1;
+			packageReferences = (
+				1204DC302D9186F80065A48E /* XCRemoteSwiftPackageReference "Kingfisher" */,
+			);
 			preferredProjectObjectVersion = 77;
 			productRefGroup = 1204DBF12D915B7B0065A48E /* Products */;
 			projectDirPath = "";
@@ -468,6 +474,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		1204DC302D9186F80065A48E /* XCRemoteSwiftPackageReference "Kingfisher" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/onevcat/Kingfisher";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 8.3.1;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		1204DC312D9186F80065A48E /* Kingfisher */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 1204DC302D9186F80065A48E /* XCRemoteSwiftPackageReference "Kingfisher" */;
+			productName = Kingfisher;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 1204DBE82D915B7B0065A48E /* Project object */;
 }
