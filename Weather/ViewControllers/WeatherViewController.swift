@@ -37,6 +37,10 @@ class WeatherViewController: UIViewController {
         super.viewDidLoad()
         view.addVerticalGradientLayer()
         tableView.tableHeaderView = headerView
+        tableView.register(
+            CollectionTableCell.nib,
+            forCellReuseIdentifier: CollectionTableCell.reuseIdentifier
+        )
         startLoading()
         fetchWeather(from: "Moscow")
     }
@@ -70,7 +74,17 @@ extension WeatherViewController: UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        UITableViewCell()
+        guard let weather = weather else { return UITableViewCell() }
+        if indexPath.section == 0 {
+            guard let cell = tableView.dequeueReusableCell(
+                withIdentifier: CollectionTableCell.reuseIdentifier,
+                for: indexPath
+            ) as? CollectionTableCell else { return UITableViewCell() }
+            cell.configure(with: weather)
+            return cell
+        } else {
+            return UITableViewCell()
+        }
     }
 }
 

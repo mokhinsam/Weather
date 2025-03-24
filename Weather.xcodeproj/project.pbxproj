@@ -22,6 +22,9 @@
 		1204DC2F2D9185360065A48E /* Extension + UIActivityIndicatorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1204DC2E2D9185340065A48E /* Extension + UIActivityIndicatorView.swift */; };
 		1204DC322D9186F80065A48E /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = 1204DC312D9186F80065A48E /* Kingfisher */; };
 		1204DC342D91878A0065A48E /* Extension + UIImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1204DC332D9187880065A48E /* Extension + UIImage.swift */; };
+		1204DC372D9188920065A48E /* CollectionTableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1204DC352D9188920065A48E /* CollectionTableCell.swift */; };
+		1204DC382D9188920065A48E /* CollectionTableCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1204DC362D9188920065A48E /* CollectionTableCell.xib */; };
+		1204DC3A2D9189430065A48E /* HourlyForecastCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1204DC392D9189430065A48E /* HourlyForecastCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -41,6 +44,9 @@
 		1204DC2C2D9183200065A48E /* Extension + UIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Extension + UIView.swift"; sourceTree = "<group>"; };
 		1204DC2E2D9185340065A48E /* Extension + UIActivityIndicatorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Extension + UIActivityIndicatorView.swift"; sourceTree = "<group>"; };
 		1204DC332D9187880065A48E /* Extension + UIImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Extension + UIImage.swift"; sourceTree = "<group>"; };
+		1204DC352D9188920065A48E /* CollectionTableCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionTableCell.swift; sourceTree = "<group>"; };
+		1204DC362D9188920065A48E /* CollectionTableCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CollectionTableCell.xib; sourceTree = "<group>"; };
+		1204DC392D9189430065A48E /* HourlyForecastCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HourlyForecastCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -143,6 +149,9 @@
 			children = (
 				1204DC272D917F990065A48E /* TableHeaderView.swift */,
 				1204DC292D917FBB0065A48E /* TableHeaderView.xib */,
+				1204DC352D9188920065A48E /* CollectionTableCell.swift */,
+				1204DC362D9188920065A48E /* CollectionTableCell.xib */,
+				1204DC392D9189430065A48E /* HourlyForecastCell.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -225,6 +234,7 @@
 				1204DC2A2D917FBB0065A48E /* TableHeaderView.xib in Resources */,
 				1204DC182D915FE90065A48E /* Assets.xcassets in Resources */,
 				1204DC192D915FE90065A48E /* LaunchScreen.storyboard in Resources */,
+				1204DC382D9188920065A48E /* CollectionTableCell.xib in Resources */,
 				1204DC1A2D915FE90065A48E /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -236,10 +246,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1204DC372D9188920065A48E /* CollectionTableCell.swift in Sources */,
 				1204DC252D917C090065A48E /* NetworkManager.swift in Sources */,
 				1204DC2F2D9185360065A48E /* Extension + UIActivityIndicatorView.swift in Sources */,
 				1204DC142D915FE90065A48E /* AppDelegate.swift in Sources */,
 				1204DC152D915FE90065A48E /* SceneDelegate.swift in Sources */,
+				1204DC3A2D9189430065A48E /* HourlyForecastCell.swift in Sources */,
 				1204DC1F2D91724E0065A48E /* SearchViewController.swift in Sources */,
 				1204DC2D2D9183200065A48E /* Extension + UIView.swift in Sources */,
 				1204DC162D915FE90065A48E /* WeatherViewController.swift in Sources */,
