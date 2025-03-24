@@ -15,6 +15,7 @@
 		1204DC1A2D915FE90065A48E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1204DC112D915FE90065A48E /* Main.storyboard */; };
 		1204DC1F2D91724E0065A48E /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1204DC1E2D91724E0065A48E /* SearchViewController.swift */; };
 		1204DC222D917A960065A48E /* Weather.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1204DC212D917A950065A48E /* Weather.swift */; };
+		1204DC252D917C090065A48E /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1204DC242D917C090065A48E /* NetworkManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +29,7 @@
 		1204DC122D915FE90065A48E /* WeatherViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherViewController.swift; sourceTree = "<group>"; };
 		1204DC1E2D91724E0065A48E /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
 		1204DC212D917A950065A48E /* Weather.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Weather.swift; sourceTree = "<group>"; };
+		1204DC242D917C090065A48E /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -73,8 +75,9 @@
 				1204DC0C2D915FE90065A48E /* App */,
 				1204DC1B2D915FFC0065A48E /* ViewControllers */,
 				1204DC202D917A7A0065A48E /* Models */,
-				1204DC1C2D91601F0065A48E /* Resources */,
+				1204DC232D917BEF0065A48E /* Services */,
 				1204DC1D2D91602B0065A48E /* Storyboards */,
+				1204DC1C2D91601F0065A48E /* Resources */,
 			);
 			path = Weather;
 			sourceTree = "<group>";
@@ -111,6 +114,14 @@
 				1204DC212D917A950065A48E /* Weather.swift */,
 			);
 			path = Models;
+			sourceTree = "<group>";
+		};
+		1204DC232D917BEF0065A48E /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				1204DC242D917C090065A48E /* NetworkManager.swift */,
+			);
+			path = Services;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -187,6 +198,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1204DC252D917C090065A48E /* NetworkManager.swift in Sources */,
 				1204DC142D915FE90065A48E /* AppDelegate.swift in Sources */,
 				1204DC152D915FE90065A48E /* SceneDelegate.swift in Sources */,
 				1204DC1F2D91724E0065A48E /* SearchViewController.swift in Sources */,
