@@ -72,14 +72,14 @@ extension HourlyForecastCell {
         ])
         
         NSLayoutConstraint.activate([
-            weatherImageView.widthAnchor.constraint(equalToConstant: 50),
-            weatherImageView.heightAnchor.constraint(equalToConstant: 50),
+            weatherImageView.widthAnchor.constraint(equalToConstant: 50).setPriority(.mainlyRequired),
+            weatherImageView.heightAnchor.constraint(equalToConstant: 50).setPriority(.mainlyRequired),
             weatherImageView.topAnchor.constraint(equalTo: hourLabel.bottomAnchor, constant: 10),
             weatherImageView.centerXAnchor.constraint(equalTo: centerXAnchor)
         ])
         
         NSLayoutConstraint.activate([
-            temperatureLabel.widthAnchor.constraint(equalToConstant: 70),
+            temperatureLabel.widthAnchor.constraint(equalToConstant: 70).setPriority(.mainlyRequired),
             temperatureLabel.topAnchor.constraint(equalTo: weatherImageView.bottomAnchor, constant: 10),
             temperatureLabel.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 10),
             temperatureLabel.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -10),

@@ -28,6 +28,8 @@
 		1204DC3C2D918BEA0065A48E /* Extension + String.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1204DC3B2D918BE90065A48E /* Extension + String.swift */; };
 		1204DC3E2D918C0D0065A48E /* Extension + Date.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1204DC3D2D918C0C0065A48E /* Extension + Date.swift */; };
 		1204DC402D918E710065A48E /* DailyForecastCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1204DC3F2D918E710065A48E /* DailyForecastCell.swift */; };
+		1204DC422D918FF20065A48E /* Extension + UILayoutPriority.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1204DC412D918FF10065A48E /* Extension + UILayoutPriority.swift */; };
+		1204DC442D9190090065A48E /* Extension + NSLayoutConstraint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1204DC432D9190080065A48E /* Extension + NSLayoutConstraint.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -53,6 +55,8 @@
 		1204DC3B2D918BE90065A48E /* Extension + String.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Extension + String.swift"; sourceTree = "<group>"; };
 		1204DC3D2D918C0C0065A48E /* Extension + Date.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Extension + Date.swift"; sourceTree = "<group>"; };
 		1204DC3F2D918E710065A48E /* DailyForecastCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DailyForecastCell.swift; sourceTree = "<group>"; };
+		1204DC412D918FF10065A48E /* Extension + UILayoutPriority.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Extension + UILayoutPriority.swift"; sourceTree = "<group>"; };
+		1204DC432D9190080065A48E /* Extension + NSLayoutConstraint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Extension + NSLayoutConstraint.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -166,6 +170,8 @@
 		1204DC2B2D9182F20065A48E /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
+				1204DC432D9190080065A48E /* Extension + NSLayoutConstraint.swift */,
+				1204DC412D918FF10065A48E /* Extension + UILayoutPriority.swift */,
 				1204DC3D2D918C0C0065A48E /* Extension + Date.swift */,
 				1204DC3B2D918BE90065A48E /* Extension + String.swift */,
 				1204DC332D9187880065A48E /* Extension + UIImage.swift */,
@@ -270,6 +276,8 @@
 				1204DC342D91878A0065A48E /* Extension + UIImage.swift in Sources */,
 				1204DC282D917F990065A48E /* TableHeaderView.swift in Sources */,
 				1204DC222D917A960065A48E /* Weather.swift in Sources */,
+				1204DC442D9190090065A48E /* Extension + NSLayoutConstraint.swift in Sources */,
+				1204DC422D918FF20065A48E /* Extension + UILayoutPriority.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

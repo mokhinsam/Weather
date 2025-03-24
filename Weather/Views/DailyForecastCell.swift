@@ -80,8 +80,8 @@ extension DailyForecastCell {
         ])
         
         NSLayoutConstraint.activate([
-            weatherImageView.widthAnchor.constraint(equalToConstant: 50),
-            weatherImageView.heightAnchor.constraint(equalToConstant: 50),
+            weatherImageView.widthAnchor.constraint(equalToConstant: 50).setPriority(.mainlyRequired),
+            weatherImageView.heightAnchor.constraint(equalToConstant: 50).setPriority(.mainlyRequired),
             weatherImageView.topAnchor.constraint(equalTo: topAnchor, constant: 10),
             weatherImageView.bottomAnchor.constraint(equalTo: bottomAnchor, constant: -10),
         ])
