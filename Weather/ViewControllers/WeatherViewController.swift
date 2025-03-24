@@ -16,6 +16,7 @@ class WeatherViewController: UIViewController {
         didSet {
             headerView.configure(with: weather, andLocation: isMyLocation)
             tableView.reloadData()
+            stopLoading()
         }
     }
     
@@ -24,14 +25,38 @@ class WeatherViewController: UIViewController {
         return header
     }()
     
+    private lazy var activityIndicator: UIActivityIndicatorView = {
+        let activityIndicator = UIActivityIndicatorView.showActivityIndicator(
+            in: view,
+            style: .large
+        )
+        return activityIndicator
+    }()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         view.addVerticalGradientLayer()
         tableView.tableHeaderView = headerView
+        startLoading()
         fetchWeather(from: "Moscow")
     }
 
 
+}
+
+//MARK: - Private Methods
+extension WeatherViewController {
+    private func startLoading() {
+        tableView.isHidden = true
+        activityIndicator.startAnimating()
+    }
+    
+    private func stopLoading() {
+        UIView.animate(withDuration: 0.3) {
+            self.tableView.isHidden = false
+            self.activityIndicator.stopAnimating()
+        }
+    }
 }
 
 //MARK: - UITableViewDataSource
@@ -65,8 +90,31 @@ extension WeatherViewController {
             case .success(let weather):
                 self?.weather = weather
             case .failure(let error):
+                self?.showAlert(withTitle: "Something went wrong with Internet")
                 print("Error fetchWeather in WeatherViewController: \(error)")
             }
+        }
+    }
+}
+
+//MARK: - UIAlertController
+extension WeatherViewController {
+    private func showAlert(withTitle title: String) {
+        let alert = UIAlertController(
+            title: title,
+            message: "Please, check your settings or internet connection and try again",
+            preferredStyle: .alert
+        )
+        let openSettingsAction = UIAlertAction(title: "Open Settings", style: .default) { _ in
+            guard let url = URL(string: UIApplication.openSettingsURLString) else { return }
+            UIApplication.shared.open(url)
+        }
+        let okAction = UIAlertAction(title: "OK", style: .default)
+        alert.addAction(openSettingsAction)
+        alert.addAction(okAction)
+        DispatchQueue.main.async { [weak self] in
+            self?.activityIndicator.stopAnimating()
+            self?.present(alert, animated: true)
         }
     }
 }
