@@ -25,6 +25,8 @@
 		1204DC372D9188920065A48E /* CollectionTableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1204DC352D9188920065A48E /* CollectionTableCell.swift */; };
 		1204DC382D9188920065A48E /* CollectionTableCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1204DC362D9188920065A48E /* CollectionTableCell.xib */; };
 		1204DC3A2D9189430065A48E /* HourlyForecastCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1204DC392D9189430065A48E /* HourlyForecastCell.swift */; };
+		1204DC3C2D918BEA0065A48E /* Extension + String.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1204DC3B2D918BE90065A48E /* Extension + String.swift */; };
+		1204DC3E2D918C0D0065A48E /* Extension + Date.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1204DC3D2D918C0C0065A48E /* Extension + Date.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -47,6 +49,8 @@
 		1204DC352D9188920065A48E /* CollectionTableCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionTableCell.swift; sourceTree = "<group>"; };
 		1204DC362D9188920065A48E /* CollectionTableCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CollectionTableCell.xib; sourceTree = "<group>"; };
 		1204DC392D9189430065A48E /* HourlyForecastCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HourlyForecastCell.swift; sourceTree = "<group>"; };
+		1204DC3B2D918BE90065A48E /* Extension + String.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Extension + String.swift"; sourceTree = "<group>"; };
+		1204DC3D2D918C0C0065A48E /* Extension + Date.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Extension + Date.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -159,6 +163,8 @@
 		1204DC2B2D9182F20065A48E /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
+				1204DC3D2D918C0C0065A48E /* Extension + Date.swift */,
+				1204DC3B2D918BE90065A48E /* Extension + String.swift */,
 				1204DC332D9187880065A48E /* Extension + UIImage.swift */,
 				1204DC2E2D9185340065A48E /* Extension + UIActivityIndicatorView.swift */,
 				1204DC2C2D9183200065A48E /* Extension + UIView.swift */,
@@ -253,8 +259,10 @@
 				1204DC152D915FE90065A48E /* SceneDelegate.swift in Sources */,
 				1204DC3A2D9189430065A48E /* HourlyForecastCell.swift in Sources */,
 				1204DC1F2D91724E0065A48E /* SearchViewController.swift in Sources */,
+				1204DC3E2D918C0D0065A48E /* Extension + Date.swift in Sources */,
 				1204DC2D2D9183200065A48E /* Extension + UIView.swift in Sources */,
 				1204DC162D915FE90065A48E /* WeatherViewController.swift in Sources */,
+				1204DC3C2D918BEA0065A48E /* Extension + String.swift in Sources */,
 				1204DC342D91878A0065A48E /* Extension + UIImage.swift in Sources */,
 				1204DC282D917F990065A48E /* TableHeaderView.swift in Sources */,
 				1204DC222D917A960065A48E /* Weather.swift in Sources */,

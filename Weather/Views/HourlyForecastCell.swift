@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import Kingfisher
 
 class HourlyForecastCell: UICollectionViewCell {
     
@@ -40,7 +41,9 @@ class HourlyForecastCell: UICollectionViewCell {
     }
     
     func configure(with hourForecast: Hour, andLocalHour localHour: String) {
+        hourLabel.text = getTime(fromApiDate: hourForecast.time, andLocalHour: localHour)
         temperatureLabel.text = "\(hourForecast.tempC)°"
+        fetchImage(from: hourForecast.condition.icon)
     }
 }
 
@@ -83,5 +86,27 @@ extension HourlyForecastCell {
             temperatureLabel.bottomAnchor.constraint(equalTo: bottomAnchor, constant: -10),
         ])
     }
+    
+    private func getTime(fromApiDate apiDateString: String, andLocalHour localHour: String) -> String {
+        guard let date = apiDateString.toDateWithTime else { return "" }
+        let hour = date.getHour
+        return localHour == hour ? "Now" : hour
+    }
 }
 
+//MARK: - Networking
+extension HourlyForecastCell {
+    private func fetchImage(from url: String) {
+        guard let imageURL = URL(string: "https:\(url)") else { return }
+        let processor = DownsamplingImageProcessor(size: weatherImageView.bounds.size)
+        weatherImageView.kf.indicatorType = .activity
+        weatherImageView.kf.setImage(
+            with: imageURL,
+            placeholder: UIImage.showPlaceholderImage(),
+            options: [
+                .processor(processor),
+                .cacheOriginalImage
+            ]
+        )
+    }
+}

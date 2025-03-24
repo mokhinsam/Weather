@@ -9,10 +9,6 @@ import UIKit
 import Kingfisher
 
 class TableHeaderView: UITableViewHeaderFooterView {
-
-    static var nib: UINib {
-        UINib(nibName: String(describing: TableHeaderView.self), bundle: nil)
-    }
     
     @IBOutlet var locationLabel: UILabel!
     @IBOutlet var subLocationLabel: UILabel!
@@ -20,6 +16,10 @@ class TableHeaderView: UITableViewHeaderFooterView {
     @IBOutlet var feelsLikeLabel: UILabel!
     @IBOutlet var weatherImage: UIImageView!
     @IBOutlet var weatherDescription: UILabel!
+    
+    static var nib: UINib {
+        UINib(nibName: String(describing: TableHeaderView.self), bundle: nil)
+    }
     
     override func layoutSubviews() {
         super.layoutSubviews()
