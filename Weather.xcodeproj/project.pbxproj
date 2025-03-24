@@ -27,6 +27,7 @@
 		1204DC3A2D9189430065A48E /* HourlyForecastCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1204DC392D9189430065A48E /* HourlyForecastCell.swift */; };
 		1204DC3C2D918BEA0065A48E /* Extension + String.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1204DC3B2D918BE90065A48E /* Extension + String.swift */; };
 		1204DC3E2D918C0D0065A48E /* Extension + Date.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1204DC3D2D918C0C0065A48E /* Extension + Date.swift */; };
+		1204DC402D918E710065A48E /* DailyForecastCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1204DC3F2D918E710065A48E /* DailyForecastCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -51,6 +52,7 @@
 		1204DC392D9189430065A48E /* HourlyForecastCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HourlyForecastCell.swift; sourceTree = "<group>"; };
 		1204DC3B2D918BE90065A48E /* Extension + String.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Extension + String.swift"; sourceTree = "<group>"; };
 		1204DC3D2D918C0C0065A48E /* Extension + Date.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Extension + Date.swift"; sourceTree = "<group>"; };
+		1204DC3F2D918E710065A48E /* DailyForecastCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DailyForecastCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -156,6 +158,7 @@
 				1204DC352D9188920065A48E /* CollectionTableCell.swift */,
 				1204DC362D9188920065A48E /* CollectionTableCell.xib */,
 				1204DC392D9189430065A48E /* HourlyForecastCell.swift */,
+				1204DC3F2D918E710065A48E /* DailyForecastCell.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -257,6 +260,7 @@
 				1204DC2F2D9185360065A48E /* Extension + UIActivityIndicatorView.swift in Sources */,
 				1204DC142D915FE90065A48E /* AppDelegate.swift in Sources */,
 				1204DC152D915FE90065A48E /* SceneDelegate.swift in Sources */,
+				1204DC402D918E710065A48E /* DailyForecastCell.swift in Sources */,
 				1204DC3A2D9189430065A48E /* HourlyForecastCell.swift in Sources */,
 				1204DC1F2D91724E0065A48E /* SearchViewController.swift in Sources */,
 				1204DC3E2D918C0D0065A48E /* Extension + Date.swift in Sources */,

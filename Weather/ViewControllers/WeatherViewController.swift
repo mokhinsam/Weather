@@ -41,6 +41,10 @@ class WeatherViewController: UIViewController {
             CollectionTableCell.nib,
             forCellReuseIdentifier: CollectionTableCell.reuseIdentifier
         )
+        tableView.register(
+            DailyForecastCell.self,
+            forCellReuseIdentifier: DailyForecastCell.reuseIdentifier
+        )
         startLoading()
         fetchWeather(from: "Moscow")
     }
@@ -66,7 +70,7 @@ extension WeatherViewController {
 //MARK: - UITableViewDataSource
 extension WeatherViewController: UITableViewDataSource {
     func numberOfSections(in tableView: UITableView) -> Int {
-        1
+        2
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -83,7 +87,13 @@ extension WeatherViewController: UITableViewDataSource {
             cell.configure(with: weather)
             return cell
         } else {
-            return UITableViewCell()
+            guard let cell = tableView.dequeueReusableCell(
+                withIdentifier: DailyForecastCell.reuseIdentifier,
+                for: indexPath
+            ) as? DailyForecastCell else { return UITableViewCell() }
+            let forecastDay = weather.forecast.forecastDay[indexPath.row]
+            cell.configure(with: forecastDay)
+            return cell
         }
     }
 }
