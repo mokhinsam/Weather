@@ -14,6 +14,7 @@
 		1204DC192D915FE90065A48E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1204DC0F2D915FE90065A48E /* LaunchScreen.storyboard */; };
 		1204DC1A2D915FE90065A48E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1204DC112D915FE90065A48E /* Main.storyboard */; };
 		1204DC1F2D91724E0065A48E /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1204DC1E2D91724E0065A48E /* SearchViewController.swift */; };
+		1204DC222D917A960065A48E /* Weather.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1204DC212D917A950065A48E /* Weather.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +27,7 @@
 		1204DC102D915FE90065A48E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		1204DC122D915FE90065A48E /* WeatherViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherViewController.swift; sourceTree = "<group>"; };
 		1204DC1E2D91724E0065A48E /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
+		1204DC212D917A950065A48E /* Weather.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Weather.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -70,6 +72,7 @@
 			children = (
 				1204DC0C2D915FE90065A48E /* App */,
 				1204DC1B2D915FFC0065A48E /* ViewControllers */,
+				1204DC202D917A7A0065A48E /* Models */,
 				1204DC1C2D91601F0065A48E /* Resources */,
 				1204DC1D2D91602B0065A48E /* Storyboards */,
 			);
@@ -100,6 +103,14 @@
 				1204DC112D915FE90065A48E /* Main.storyboard */,
 			);
 			path = Storyboards;
+			sourceTree = "<group>";
+		};
+		1204DC202D917A7A0065A48E /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				1204DC212D917A950065A48E /* Weather.swift */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -180,6 +191,7 @@
 				1204DC152D915FE90065A48E /* SceneDelegate.swift in Sources */,
 				1204DC1F2D91724E0065A48E /* SearchViewController.swift in Sources */,
 				1204DC162D915FE90065A48E /* WeatherViewController.swift in Sources */,
+				1204DC222D917A960065A48E /* Weather.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
