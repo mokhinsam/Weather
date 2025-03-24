@@ -43,6 +43,9 @@
                             </connections>
                         </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="tableView" destination="79V-cX-6vy" id="x2A-Rw-0CR"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="uar-qg-J17" sceneMemberID="firstResponder"/>
             </objects>

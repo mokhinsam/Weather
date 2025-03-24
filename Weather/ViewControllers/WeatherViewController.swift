@@ -9,9 +9,16 @@ import UIKit
 
 class WeatherViewController: UIViewController {
 
+    @IBOutlet weak var tableView: UITableView!
+    
+    private lazy var headerView: TableHeaderView = {
+        let header = TableHeaderView.loadFromNib()
+        return header
+    }()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
+        tableView.tableHeaderView = headerView
     }
 
 
