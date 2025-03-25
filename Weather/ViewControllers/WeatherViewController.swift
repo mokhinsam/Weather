@@ -7,8 +7,12 @@
 
 import UIKit
 
-class WeatherViewController: UIViewController {
+protocol LocationManagerDelegate {
+    func repeatRequestLocation()
+}
 
+class WeatherViewController: UIViewController {
+    
     @IBOutlet weak var tableView: UITableView!
     
     private var sectionHeaders = SectionHeader.getHeaders()
@@ -50,8 +54,9 @@ class WeatherViewController: UIViewController {
             SectionHeaderView.self,
             forHeaderFooterViewReuseIdentifier: SectionHeaderView.reuseIdentifier
         )
+        LocationManager.shared.delegate = self
         startLoading()
-        fetchWeather(from: "Moscow")
+        requestLocation()
     }
 }
 
@@ -116,6 +121,33 @@ extension WeatherViewController: UITableViewDelegate {
     }
 }
 
+//MARK: - LocationManagerDelegate
+extension WeatherViewController: LocationManagerDelegate {
+    func repeatRequestLocation() {
+        requestLocation()
+    }
+}
+
+//MARK: - Location
+extension WeatherViewController {
+    private func requestLocation() {
+        LocationManager.shared.requestLocation { [weak self] result in
+            switch result {
+            case .success(let coordinates):
+                self?.fetchWeather(from: "\(coordinates.lat),\(coordinates.lon)")
+                self?.isMyLocation = true
+            case .failure(let error):
+                let error = "\(error)"
+                self?.showAlert(
+                    withTitle: error == "noPermission"
+                    ? "No Permission to get Location"
+                    : "Something went wrong with your Location"
+                )
+            }
+        }
+    }
+}
+
 //MARK: - Networking
 extension WeatherViewController {
     private func fetchWeather(from nameLocation: String) {
@@ -127,7 +159,6 @@ extension WeatherViewController {
                 self?.weather = weather
             case .failure(let error):
                 self?.showAlert(withTitle: "Something went wrong with Internet")
-                print("Error fetchWeather in WeatherViewController: \(error)")
             }
         }
     }

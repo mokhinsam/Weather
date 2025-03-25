@@ -32,6 +32,7 @@
 		1204DC442D9190090065A48E /* Extension + NSLayoutConstraint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1204DC432D9190080065A48E /* Extension + NSLayoutConstraint.swift */; };
 		12A7DAD62D929E4F003D3EE6 /* SectionHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12A7DAD52D929E4D003D3EE6 /* SectionHeader.swift */; };
 		12A7DAD82D929F2B003D3EE6 /* SectionHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12A7DAD72D929F2B003D3EE6 /* SectionHeaderView.swift */; };
+		12A7DADA2D92A242003D3EE6 /* LocationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12A7DAD92D92A240003D3EE6 /* LocationManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -61,6 +62,7 @@
 		1204DC432D9190080065A48E /* Extension + NSLayoutConstraint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Extension + NSLayoutConstraint.swift"; sourceTree = "<group>"; };
 		12A7DAD52D929E4D003D3EE6 /* SectionHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SectionHeader.swift; sourceTree = "<group>"; };
 		12A7DAD72D929F2B003D3EE6 /* SectionHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SectionHeaderView.swift; sourceTree = "<group>"; };
+		12A7DAD92D92A240003D3EE6 /* LocationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -154,6 +156,7 @@
 		1204DC232D917BEF0065A48E /* Services */ = {
 			isa = PBXGroup;
 			children = (
+				12A7DAD92D92A240003D3EE6 /* LocationManager.swift */,
 				1204DC242D917C090065A48E /* NetworkManager.swift */,
 			);
 			path = Services;
@@ -279,6 +282,7 @@
 				12A7DAD82D929F2B003D3EE6 /* SectionHeaderView.swift in Sources */,
 				1204DC2D2D9183200065A48E /* Extension + UIView.swift in Sources */,
 				1204DC162D915FE90065A48E /* WeatherViewController.swift in Sources */,
+				12A7DADA2D92A242003D3EE6 /* LocationManager.swift in Sources */,
 				1204DC3C2D918BEA0065A48E /* Extension + String.swift in Sources */,
 				1204DC342D91878A0065A48E /* Extension + UIImage.swift in Sources */,
 				1204DC282D917F990065A48E /* TableHeaderView.swift in Sources */,
