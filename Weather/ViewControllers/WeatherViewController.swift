@@ -11,6 +11,7 @@ class WeatherViewController: UIViewController {
 
     @IBOutlet weak var tableView: UITableView!
     
+    private var sectionHeaders = SectionHeader.getHeaders()
     private var isMyLocation = false
     private var weather: Weather? {
         didSet {
@@ -45,11 +46,13 @@ class WeatherViewController: UIViewController {
             DailyForecastCell.self,
             forCellReuseIdentifier: DailyForecastCell.reuseIdentifier
         )
+        tableView.register(
+            SectionHeaderView.self,
+            forHeaderFooterViewReuseIdentifier: SectionHeaderView.reuseIdentifier
+        )
         startLoading()
         fetchWeather(from: "Moscow")
     }
-
-
 }
 
 //MARK: - Private Methods
@@ -70,11 +73,11 @@ extension WeatherViewController {
 //MARK: - UITableViewDataSource
 extension WeatherViewController: UITableViewDataSource {
     func numberOfSections(in tableView: UITableView) -> Int {
-        2
+        sectionHeaders.count
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        1
+        section == 0 ? 1 : (weather?.forecast.forecastDay.count ?? 0)
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -100,8 +103,17 @@ extension WeatherViewController: UITableViewDataSource {
 
 //MARK: - UITableViewDelegate
 extension WeatherViewController: UITableViewDelegate {
-
-
+    func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
+        guard let headerView = tableView.dequeueReusableHeaderFooterView(
+            withIdentifier: SectionHeaderView.reuseIdentifier
+        ) as? SectionHeaderView else { return UIView() }
+        headerView.configure(with: sectionHeaders[section])
+        return headerView
+    }
+    
+    func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
+        44
+    }
 }
 
 //MARK: - Networking

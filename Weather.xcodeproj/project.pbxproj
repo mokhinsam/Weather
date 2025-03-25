@@ -30,6 +30,8 @@
 		1204DC402D918E710065A48E /* DailyForecastCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1204DC3F2D918E710065A48E /* DailyForecastCell.swift */; };
 		1204DC422D918FF20065A48E /* Extension + UILayoutPriority.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1204DC412D918FF10065A48E /* Extension + UILayoutPriority.swift */; };
 		1204DC442D9190090065A48E /* Extension + NSLayoutConstraint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1204DC432D9190080065A48E /* Extension + NSLayoutConstraint.swift */; };
+		12A7DAD62D929E4F003D3EE6 /* SectionHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12A7DAD52D929E4D003D3EE6 /* SectionHeader.swift */; };
+		12A7DAD82D929F2B003D3EE6 /* SectionHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12A7DAD72D929F2B003D3EE6 /* SectionHeaderView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -57,6 +59,8 @@
 		1204DC3F2D918E710065A48E /* DailyForecastCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DailyForecastCell.swift; sourceTree = "<group>"; };
 		1204DC412D918FF10065A48E /* Extension + UILayoutPriority.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Extension + UILayoutPriority.swift"; sourceTree = "<group>"; };
 		1204DC432D9190080065A48E /* Extension + NSLayoutConstraint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Extension + NSLayoutConstraint.swift"; sourceTree = "<group>"; };
+		12A7DAD52D929E4D003D3EE6 /* SectionHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SectionHeader.swift; sourceTree = "<group>"; };
+		12A7DAD72D929F2B003D3EE6 /* SectionHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SectionHeaderView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -142,6 +146,7 @@
 			isa = PBXGroup;
 			children = (
 				1204DC212D917A950065A48E /* Weather.swift */,
+				12A7DAD52D929E4D003D3EE6 /* SectionHeader.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -163,6 +168,7 @@
 				1204DC362D9188920065A48E /* CollectionTableCell.xib */,
 				1204DC392D9189430065A48E /* HourlyForecastCell.swift */,
 				1204DC3F2D918E710065A48E /* DailyForecastCell.swift */,
+				12A7DAD72D929F2B003D3EE6 /* SectionHeaderView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -270,11 +276,13 @@
 				1204DC3A2D9189430065A48E /* HourlyForecastCell.swift in Sources */,
 				1204DC1F2D91724E0065A48E /* SearchViewController.swift in Sources */,
 				1204DC3E2D918C0D0065A48E /* Extension + Date.swift in Sources */,
+				12A7DAD82D929F2B003D3EE6 /* SectionHeaderView.swift in Sources */,
 				1204DC2D2D9183200065A48E /* Extension + UIView.swift in Sources */,
 				1204DC162D915FE90065A48E /* WeatherViewController.swift in Sources */,
 				1204DC3C2D918BEA0065A48E /* Extension + String.swift in Sources */,
 				1204DC342D91878A0065A48E /* Extension + UIImage.swift in Sources */,
 				1204DC282D917F990065A48E /* TableHeaderView.swift in Sources */,
+				12A7DAD62D929E4F003D3EE6 /* SectionHeader.swift in Sources */,
 				1204DC222D917A960065A48E /* Weather.swift in Sources */,
 				1204DC442D9190090065A48E /* Extension + NSLayoutConstraint.swift in Sources */,
 				1204DC422D918FF20065A48E /* Extension + UILayoutPriority.swift in Sources */,
@@ -316,8 +324,8 @@
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -348,8 +356,8 @@
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
