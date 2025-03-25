@@ -34,6 +34,7 @@
 		12A7DAD82D929F2B003D3EE6 /* SectionHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12A7DAD72D929F2B003D3EE6 /* SectionHeaderView.swift */; };
 		12A7DADA2D92A242003D3EE6 /* LocationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12A7DAD92D92A240003D3EE6 /* LocationManager.swift */; };
 		12A7DADC2D92B2D0003D3EE6 /* Extension + UINavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12A7DADB2D92B2BC003D3EE6 /* Extension + UINavigationController.swift */; };
+		12A7DADE2D92B71D003D3EE6 /* LocalSearchManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12A7DADD2D92B71A003D3EE6 /* LocalSearchManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -65,6 +66,7 @@
 		12A7DAD72D929F2B003D3EE6 /* SectionHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SectionHeaderView.swift; sourceTree = "<group>"; };
 		12A7DAD92D92A240003D3EE6 /* LocationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationManager.swift; sourceTree = "<group>"; };
 		12A7DADB2D92B2BC003D3EE6 /* Extension + UINavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Extension + UINavigationController.swift"; sourceTree = "<group>"; };
+		12A7DADD2D92B71A003D3EE6 /* LocalSearchManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalSearchManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -158,6 +160,7 @@
 		1204DC232D917BEF0065A48E /* Services */ = {
 			isa = PBXGroup;
 			children = (
+				12A7DADD2D92B71A003D3EE6 /* LocalSearchManager.swift */,
 				12A7DAD92D92A240003D3EE6 /* LocationManager.swift */,
 				1204DC242D917C090065A48E /* NetworkManager.swift */,
 			);
@@ -292,6 +295,7 @@
 				1204DC282D917F990065A48E /* TableHeaderView.swift in Sources */,
 				12A7DAD62D929E4F003D3EE6 /* SectionHeader.swift in Sources */,
 				1204DC222D917A960065A48E /* Weather.swift in Sources */,
+				12A7DADE2D92B71D003D3EE6 /* LocalSearchManager.swift in Sources */,
 				1204DC442D9190090065A48E /* Extension + NSLayoutConstraint.swift in Sources */,
 				1204DC422D918FF20065A48E /* Extension + UILayoutPriority.swift in Sources */,
 			);

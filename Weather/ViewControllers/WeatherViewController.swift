@@ -7,6 +7,10 @@
 
 import UIKit
 
+protocol SearchViewControllerDelegate {
+    func displayLocationValue(from nameLocation: String)
+}
+
 protocol LocationManagerDelegate {
     func repeatRequestLocation()
 }
@@ -60,6 +64,10 @@ class WeatherViewController: UIViewController {
         requestLocation()
     }
     
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        guard let searchVC = segue.destination as? SearchViewController else { return }
+        searchVC.delegate = self
+    }
     
     @IBAction func locationButtonDidPressed(_ sender: UIBarButtonItem) {
         startLoading()
@@ -132,6 +140,16 @@ extension WeatherViewController: UITableViewDelegate {
 extension WeatherViewController: LocationManagerDelegate {
     func repeatRequestLocation() {
         requestLocation()
+    }
+}
+
+//MARK: - SearchViewControllerDelegate
+extension WeatherViewController: SearchViewControllerDelegate {
+    func displayLocationValue(from nameLocation: String) {
+        print("DisplayLocationValue check!")
+        startLoading()
+        fetchWeather(from: nameLocation)
+        isMyLocation = false
     }
 }
 
