@@ -36,7 +36,11 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="3Ie-oj-fXp">
-                        <barButtonItem key="leftBarButtonItem" image="location.circle" catalog="system" id="Ahe-9Q-a8w"/>
+                        <barButtonItem key="leftBarButtonItem" image="location.circle" catalog="system" id="Ahe-9Q-a8w">
+                            <connections>
+                                <action selector="locationButtonDidPressed:" destination="mRp-KL-UKf" id="MbV-Uc-JbJ"/>
+                            </connections>
+                        </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" systemItem="search" id="uM0-HZ-dDu">
                             <connections>
                                 <segue destination="RkC-Ha-aI1" kind="presentation" id="dRV-cQ-ecF"/>

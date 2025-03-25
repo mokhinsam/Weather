@@ -33,6 +33,7 @@
 		12A7DAD62D929E4F003D3EE6 /* SectionHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12A7DAD52D929E4D003D3EE6 /* SectionHeader.swift */; };
 		12A7DAD82D929F2B003D3EE6 /* SectionHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12A7DAD72D929F2B003D3EE6 /* SectionHeaderView.swift */; };
 		12A7DADA2D92A242003D3EE6 /* LocationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12A7DAD92D92A240003D3EE6 /* LocationManager.swift */; };
+		12A7DADC2D92B2D0003D3EE6 /* Extension + UINavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12A7DADB2D92B2BC003D3EE6 /* Extension + UINavigationController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -63,6 +64,7 @@
 		12A7DAD52D929E4D003D3EE6 /* SectionHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SectionHeader.swift; sourceTree = "<group>"; };
 		12A7DAD72D929F2B003D3EE6 /* SectionHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SectionHeaderView.swift; sourceTree = "<group>"; };
 		12A7DAD92D92A240003D3EE6 /* LocationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationManager.swift; sourceTree = "<group>"; };
+		12A7DADB2D92B2BC003D3EE6 /* Extension + UINavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Extension + UINavigationController.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -179,6 +181,7 @@
 		1204DC2B2D9182F20065A48E /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
+				12A7DADB2D92B2BC003D3EE6 /* Extension + UINavigationController.swift */,
 				1204DC432D9190080065A48E /* Extension + NSLayoutConstraint.swift */,
 				1204DC412D918FF10065A48E /* Extension + UILayoutPriority.swift */,
 				1204DC3D2D918C0C0065A48E /* Extension + Date.swift */,
@@ -281,6 +284,7 @@
 				1204DC3E2D918C0D0065A48E /* Extension + Date.swift in Sources */,
 				12A7DAD82D929F2B003D3EE6 /* SectionHeaderView.swift in Sources */,
 				1204DC2D2D9183200065A48E /* Extension + UIView.swift in Sources */,
+				12A7DADC2D92B2D0003D3EE6 /* Extension + UINavigationController.swift in Sources */,
 				1204DC162D915FE90065A48E /* WeatherViewController.swift in Sources */,
 				12A7DADA2D92A242003D3EE6 /* LocationManager.swift in Sources */,
 				1204DC3C2D918BEA0065A48E /* Extension + String.swift in Sources */,

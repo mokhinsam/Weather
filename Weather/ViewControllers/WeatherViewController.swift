@@ -41,6 +41,7 @@ class WeatherViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         view.addVerticalGradientLayer()
+        navigationController?.setupNavigationBar()
         tableView.tableHeaderView = headerView
         tableView.register(
             CollectionTableCell.nib,
@@ -55,6 +56,12 @@ class WeatherViewController: UIViewController {
             forHeaderFooterViewReuseIdentifier: SectionHeaderView.reuseIdentifier
         )
         LocationManager.shared.delegate = self
+        startLoading()
+        requestLocation()
+    }
+    
+    
+    @IBAction func locationButtonDidPressed(_ sender: UIBarButtonItem) {
         startLoading()
         requestLocation()
     }
@@ -159,6 +166,7 @@ extension WeatherViewController {
                 self?.weather = weather
             case .failure(let error):
                 self?.showAlert(withTitle: "Something went wrong with Internet")
+                print("Error fetchWeather in WeatherViewController: \(error)")
             }
         }
     }
