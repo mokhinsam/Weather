@@ -97,6 +97,10 @@
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     </tableViewCell>
                                 </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="RkC-Ha-aI1" id="pu9-9i-q7Y"/>
+                                    <outlet property="delegate" destination="RkC-Ha-aI1" id="jaH-4e-yS6"/>
+                                </connections>
                             </tableView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KxH-JA-M5B">
                                 <rect key="frame" x="156.66666666666666" y="0.0" width="80" height="34"/>
@@ -107,6 +111,9 @@
                                         <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     </backgroundConfiguration>
                                 </buttonConfiguration>
+                                <connections>
+                                    <action selector="downButtonDidPressed" destination="RkC-Ha-aI1" eventType="touchUpInside" id="CSj-cs-xcV"/>
+                                </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="4K3-ej-gHg"/>
@@ -127,6 +134,10 @@
                             <constraint firstAttribute="bottom" secondItem="Dtm-Vb-Aoa" secondAttribute="bottom" id="yQu-rE-r5i"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="searchBar" destination="43W-TT-Wqm" id="cvV-c3-Qvx"/>
+                        <outlet property="tableView" destination="Dtm-Vb-Aoa" id="lHL-ot-Db6"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="xug-iV-4v1" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
