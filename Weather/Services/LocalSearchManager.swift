@@ -8,9 +8,9 @@
 import MapKit
 
 class LocalSearchManager: NSObject {
-    
     static let shared = LocalSearchManager()
     
+    private let debouncer = Debouncer(delay: 2)
     private var searchCompleter = MKLocalSearchCompleter()
     private var searchResults: [MKLocalSearchCompletion] = []
     private var onSearch: (([MKLocalSearchCompletion]) -> Void)?
@@ -23,8 +23,10 @@ class LocalSearchManager: NSObject {
     
     func search(text: String, completion: @escaping (([MKLocalSearchCompletion]) -> Void)) {
         if !text.isEmpty {
-            searchCompleter.queryFragment = text
-            onSearch = completion
+            debouncer.debounce { [weak self] in
+                self?.searchCompleter.queryFragment = text
+                self?.onSearch = completion
+            }
         }
     }
 }

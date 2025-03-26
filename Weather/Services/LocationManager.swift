@@ -15,7 +15,6 @@ enum LocationError: Error {
 typealias Coordinates = (lat: Double, lon: Double)
 
 class LocationManager: NSObject {
-    
     static let shared = LocationManager()
     
     var delegate: LocationManagerDelegate?
