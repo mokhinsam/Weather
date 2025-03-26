@@ -134,6 +134,17 @@ extension WeatherViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
         44
     }
+    
+    func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
+        if let collectionViewCell = cell as? CollectionTableCell {
+            collectionViewCell.collectionView.scrollToItem(
+                at: IndexPath(item: 0, section: 0),
+                at: .left,
+                animated: false
+            )
+            collectionViewCell.collectionView.reloadData()
+        }
+    }
 }
 
 //MARK: - LocationManagerDelegate

@@ -21,6 +21,7 @@ class SearchViewController: UIViewController {
     }
     
     @IBAction func downButtonDidPressed() {
+        dismiss(animated: true)
     }
 }
 
