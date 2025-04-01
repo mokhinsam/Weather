@@ -65,7 +65,7 @@ extension LocationManager: CLLocationManagerDelegate {
     
     func locationManagerDidChangeAuthorization(_ manager: CLLocationManager) {
         switch manager.authorizationStatus {
-        case .authorizedWhenInUse, .authorizedAlways:
+        case .authorizedWhenInUse, .authorizedAlways, .denied:
             if !locationRequested {
                 delegate?.repeatRequestLocation()
             }
