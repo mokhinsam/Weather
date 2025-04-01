@@ -157,7 +157,6 @@ extension WeatherViewController: LocationManagerDelegate {
 //MARK: - SearchViewControllerDelegate
 extension WeatherViewController: SearchViewControllerDelegate {
     func displayLocationValue(from nameLocation: String) {
-        print("DisplayLocationValue check!")
         startLoading()
         fetchWeather(from: nameLocation)
         isMyLocation = false
@@ -193,9 +192,8 @@ extension WeatherViewController {
             switch result {
             case .success(let weather):
                 self?.weather = weather
-            case .failure(let error):
+            case .failure(_):
                 self?.showAlert(withTitle: "Something went wrong with Internet")
-                print("Error fetchWeather in WeatherViewController: \(error)")
             }
         }
     }

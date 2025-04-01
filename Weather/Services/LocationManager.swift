@@ -33,7 +33,6 @@ class LocationManager: NSObject {
             locationRequested = false
             locationManager.requestWhenInUseAuthorization()
         } else {
-            print("Start updating...")
             locationRequested = true
             locationManager.requestLocation()
             self.completion = completion
@@ -49,7 +48,6 @@ extension LocationManager: CLLocationManagerDelegate {
         let lon = location.coordinate.longitude
         let coordinates = (lat: lat, lon: lon)
         self.completion?(.success(coordinates))
-        print("Location received.")
     }
     
     func locationManager(_ manager: CLLocationManager, didFailWithError error: any Error) {
