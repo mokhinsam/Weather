@@ -31,37 +31,34 @@ class CollectionTableCell: UITableViewCell {
     }
     
     func configure(with weather: Weather) {
-        hoursForecast = getTwentyFourHourForecast(in: weather)
-        localHour = getLocalHour(in: weather)
+        hoursForecast = getTwentyFourHourForecast(from: weather)
+        localHour = getLocalHour(from: weather)
     }
 }
 
 //MARK: - Private Methods
 extension CollectionTableCell {
-    private func getLocalHour(in weather: Weather) -> String {
-        guard let localTime = weather.location.localTime.toDateWithTime else { return "" }
-        let localHour = localTime.getHour
-        return localHour
+    private func getLocalHour(from weather: Weather) -> String {
+        weather.location.localTime.toDateWithTime?.getHour ?? "0"
     }
-    
-    private func getTwentyFourHourForecast(in weather: Weather) -> [Hour] {
-        var hoursForecast: [Hour] = []
-        let localHour = getLocalHour(in: weather)
-        let localHourInt = Int(localHour) ?? 0
+
+    private func getTwentyFourHourForecast(from weather: Weather) -> [Hour] {
+        guard let firstDay = weather.forecast.forecastDay.first else { return [] }
         
-        for day in 0..<weather.forecast.forecastDay.count - 1 {
-            let dayForecast = weather.forecast.forecastDay[day]
-            var timestamps = dayForecast.hour
-            
-            if day == 0 {
-                timestamps.removeFirst(localHourInt)
-                hoursForecast = timestamps
-            } else {
-                let residue = 24 - hoursForecast.count
-                hoursForecast += timestamps.prefix(residue)
-            }
+        let currentHourString = getLocalHour(from: weather)
+        let currentHour = Int(currentHourString) ?? 0
+        
+        let remainingHoursToday = Array(firstDay.hour.dropFirst(currentHour))
+        
+        guard remainingHoursToday.count < 24,
+              let nextDay = weather.forecast.forecastDay.dropFirst().first else {
+            return Array(remainingHoursToday.prefix(24))
         }
-        return hoursForecast
+        
+        let neededHours = 24 - remainingHoursToday.count
+        let nextDayHours = Array(nextDay.hour.prefix(neededHours))
+        
+        return remainingHoursToday + nextDayHours
     }
 }
 
